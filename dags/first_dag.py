@@ -9,6 +9,7 @@ from airflow.operators.bash import BashOperator
 
 with DAG(
     "my_first_dag",
+    tags=["mlops"],
     # These args will get passed on to each operator
     # You can override them on a per-task basis during operator initialization
     default_args={
