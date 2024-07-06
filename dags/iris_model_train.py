@@ -9,15 +9,15 @@ from airflow.operators.python import PythonOperator
 from iris_ml.operations import load_data, post_model, train_step
 
 with DAG(
-    "iris_prediction",
+    "iris_model_train",
     tags=["iris_ml"],
-    schedule="@daily",
+    schedule=None,
     # These args will get passed on to each operator
     # You can override them on a per-task basis during operator initialization
     default_args={
         "retries": 0,
     },
-    description="Predict flower spiecies for new data",
+    description="Train iris multiclass model",
     catchup=False,
 ) as dag:
 
