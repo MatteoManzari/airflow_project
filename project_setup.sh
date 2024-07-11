@@ -6,8 +6,14 @@ source ./project_env/bin/activate
 
 pip install -r requirements.txt
 
+#remove examples dags
+rm project_env/lib/python3.9/site-packages/airflow/example_dags/*.py
 
-PROJECT_DIR="$(pwd)/airflow"
-export AIRFLOW_HOME=$PROJECT_DIR
+#setting up environment variables
+DAGS_DIR="$(pwd)/dags"
+AIRFLOW_DIR="$(pwd)/airflow"
+export AIRFLOW_HOME=$AIRFLOW_DIR
+export AIRFLOW__CORE__DAGS_FOLDER=$DAGS_DIR
 
+#run airflow in dev mode
 airflow standalone
