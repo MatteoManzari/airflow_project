@@ -1,0 +1,5 @@
+#export AIRFLOW_HOME=~/Documents/data_science/airflow_project/airflow
+#export AIRFLOW__CORE__LOAD_EXAMPLES=False
+aggiungere use cases (etl?)
+
+creare il file project_setup.sh
