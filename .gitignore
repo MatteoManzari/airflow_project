@@ -2,3 +2,4 @@ logs/
 env/
 airflow/
 project_env/
+.DS_Store
