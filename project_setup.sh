@@ -1,12 +1,13 @@
-chmod +x your_script.sh
+mkdir airflow
+
 pip3 install virtualenv -v
 python3 -m virtualenv project_env
-chmod +x project_env/bin/activate
 source ./project_env/bin/activate           
+
 pip install -r requirements.txt
 
-mkdir airflow
-PROJECT_DIR="$(pwd)"
+
+PROJECT_DIR="$(pwd)/airflow"
 export AIRFLOW_HOME=$PROJECT_DIR
 
 airflow standalone
