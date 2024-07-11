@@ -5,6 +5,7 @@ chmod +x project_env/bin/activate
 source ./project_env/bin/activate           
 pip install -r requirements.txt
 
+mkdir airflow
 PROJECT_DIR="$(pwd)"
 export AIRFLOW_HOME=$PROJECT_DIR
 
